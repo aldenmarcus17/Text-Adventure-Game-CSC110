@@ -1,0 +1,565 @@
+{
+  "locations": [
+    {
+      "id": 4,
+      "name": "Lower St. George Street",
+      "brief_description": "You are in Lower St. George Street. There is a cutesie thrift market here. To the West ofyou is Bahen, and East of you is Myhal",
+      "long_description": "You walk down the road and see a cutesie thrift market set up in front of Myhal. What a joyous day! Perhaps you can buy something for yourself, or maybe something for someone else. West of you is the entrance to Bahen, and East of you is the entrance to Myhal. The stench from each building is already kind of suffocating you.",
+      "available_commands": {
+        "go west": 34,
+        "go east": 41,
+        "go north": 2,
+        "talk to market vendor": -5
+      },
+      "interaction": "The market vendor greets you with a warm tone and say that all of their items are $5. What a steal! He let's you inspect each one, and tells you to take your time. Maybe don't take too long though, you have a paper due!",
+      "interaction_commands": {
+        "purchase shirt": "shirt",
+        "purchase bandana": "bandana",
+        "purchase socks": "socks",
+        "purchase vintage book": "vintage book",
+        "purchase hat": "hat"
+      },
+      "items": []
+    },
+    {
+      "id": 3,
+      "name": "Sir Daniel Wilson Residence",
+      "brief_description": "You are in your dorm room. Your bed looks extra comfy, and so does your cute stuffies! An exit to Middle St. George Street is to the West.",
+      "long_description": "You wake up in a panic with stuffies in your arms. Your alarm starts screaming. It's 3:00 pm and you realise that your CS Project is due at 4:00pm! You can't afford to get a zero or else you won't meet the COMP1 requirements and you'll get kicked from the program. There's only one way to solve this... by submitting your busted project on time (and maybe with some bribery)! You write down a plan of action which sits on your desk cutely. An exit to Middle St. George Street is to the West.",
+      "available_commands": {
+        "go west": 2
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": ["plan"]
+    },
+    {
+      "id": 2,
+      "name": "Middle St. George Street",
+      "brief_description": "You are in Middle St. George Street. There's a hot dog stand selling $5 hotdogs. West of you is Sidney Smith, North of you is Upper St. George Street, South of you is Lower St. George Street, and East of you is your residence.",
+      "long_description": "The sun hits your eyes as you squint to gather your bearings. In front of you is your favourite $5 hotdog stand that resides in front of Sid Smith, perhaps it can provide you with more energy. To the West is Sidney Smith, your favourite place to have sweaty tutorials and guidance. Further up North is Upper St. George Street which goes to Robarts. South of you is Lower St. George Street, which has all the musty Eng buildings connected to it, Bahen and Myhal. To the East of you is your residence.",
+      "available_commands": {
+        "go north": 1,
+        "go east": 3,
+        "go south": 4,
+        "go west": 22,
+        "buy hotdog": "hotdog"
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 1,
+      "name": "Upper St. George Street",
+      "brief_description": "You are in Upper St. George Street. There is a student who seems like they need help with their homework. West of you is Robarts, and South of you is Middle St. George Street.",
+      "long_description": "You go up the road to be greeted by a ton of sleep-deprived students exiting Robarts, you know that most of them spent 24 hours there. One of them looks at you, it seems they need help with their class. To the West of you, Robarts stands tall. South of you is Middle St. George Street.",
+      "available_commands": {
+        "go south": 2,
+        "go west": 12,
+        "talk to student": -5
+      },
+      "interaction": "You look at a very confused student who seems like they need your help. They say they are in philosophy, and are asking you a serious question about life: I have two legs and two arms, what am I?",
+      "interaction_commands": {
+        "dog": "thumbs down",
+        "cat": "thumbs down",
+        "human": "stuffie",
+        "octopus": "thumbs down"
+      },
+      "items": []
+    },
+    {
+      "id": 12,
+      "name": "Robarts 1F",
+      "brief_description": "You are in Robarts 1F. There is a student you can talk to here. Exiting the building leads to Upper St. George Street, going up the stairs leads to the Robarts' Food Court.",
+      "long_description": "The dreary aura that eminates from Robarts hits full force as you enter the library. The pain and suffering of students can be heard throughout the first floor, a sound you might be contributing too very soon. There's a student in front of you who seems a bit mad at his CSC110 marks, maybe he needs a nice compliment. In the middle of the room is a flight of stairs that leads to the food court.",
+      "available_commands": {
+        "go up": 11,
+        "exit building": 1,
+        "talk to student": -5
+      },
+      "interaction": "The student starts fuming over Proffesor Sadia gave him a 69% in CSC110, which forced him to gets kicked out of the program. He seems to want to take revenge. He then randomly tells you a fun fact about Sadia: she LOVES egg! Wonder if that's true...",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 11,
+      "name": "Robarts' Food Court",
+      "brief_description": "You are in the Robarts Food Court. There is a Starbucks you can buy food from, it costs $8 for any item. Going down the stairs leads to Robarts 1F.",
+      "long_description": "The scent of coffee, beans, and greasy chinese food hits your nose all at once. Maybe you should stop by Starbucks and go buy something for yourself, or for your professor if you really feel nice today... Going down the stairs leads to Robarts 1F.",
+      "available_commands": {
+        "go down": 12,
+        "purchase food from starbucks": -5
+      },
+      "interaction": "The person at the counter asks what they can get for you. So much pressure, how can you choose just one thing from these 5 options! Each item is $8.",
+      "interaction_commands": {
+        "buy coffee": "coffee",
+        "buy matcha": "matcha",
+        "buy egg sandwich": "egg sandwich",
+        "buy caramel latte": "caramel latte",
+        "buy pink drink": "pink drink"
+      },
+      "items": ["usb"]
+    },
+    {
+      "id": 24,
+      "name": "Sidney Smith Commons",
+      "brief_description": "You are in the Sid Smith Commons. Your friend is here; they look like they want to talk to you. Going North leads to the entrance of Sidney Smith.",
+      "long_description": "You walk into the Sid Smith Commons to see that a bunch of Registered Study Groups are hard at work. If only you were as proactive as they were. One of your friends is studying in the commons and looks like he has something to tell you. Aaaanddd.... WAIT!!! Is that your charger!?!? Going North leads you to the Sidney Smith entrance.",
+      "available_commands": {
+        "go north": 22,
+        "talk to friend": -5
+      },
+      "interaction": "Your friend shares with you that Sadia has been wanting a bandana for her dog to make it 'look dapper.' Apparently Bumbly chewed through his last one, so she's been wanting to buy a new one. You ask how they got this information, and they simply shrug.",
+      "interaction_commands": {},
+      "items": ["charger"]
+    },
+    {
+      "id": 23,
+      "name": "Guidance Office",
+      "brief_description": "You are in the Guidance Office. There's a guidance counsellor ready to answer all your questions. Going North leads to Second Cup.",
+      "long_description": "You barge into the Guidance Office looking for guidance (obviously). There's a friendly lady at the counter who asks what your question is. The sudden urge to dropout of school consumes you, but you can't tell if that overpowers your urge to pass your CSC111 project. Going North leads to the Second Cup.",
+      "available_commands": {
+        "go north": 21,
+        "ask to dropout": 91,
+        "ask for life advice": "life advice",
+        "ask if they know anything about sadia": "sadia fact"
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 22,
+      "name": "Sidney Smith Entrance",
+      "brief_description": "You are in the Sidney Smith Entrance. There is a vending machine that costs a physical toonie per item. East of you is Middle St. George Street, West of you is Second Cup and South of you is the Sid Smith Commons.",
+      "long_description": "You walk into Sidney Smith and immediately feel the humidity go up 10%. So sweaty, but you must push through, you feel your charger is somewhere in here. There's a vending machine in the entrance room, which has five options, each costing a physical toonie. So much variety! East of you is a Second Cup, and South of you is the Sid Smith Commons.",
+      "available_commands": {
+        "exit building": 2,
+        "go south": 24,
+        "go west": 21,
+        "buy from vending machine": -5
+      },
+      "interaction": "Each item in the vending machine is worth a toonie. Pick an option that REALLY speaks to you. Like really.",
+      "interaction_commands": {
+        "buy sour patch kids": "sour patch kids",
+        "buy gatorade": "gatorade",
+        "buy welches": "welches",
+        "buy mars bar": "mars bar",
+        "buy coffee crisp": "coffee crisp"
+      },
+      "items": []
+    },
+    {
+      "id": 21,
+      "name": "Second Cup",
+      "brief_description": "You are in Second Cup. It seems closed right now. Going East leads to the Entrance, and South leads to the Guidance Office.",
+      "long_description": "You walk into the Sidney Smith Second Cup and it looks... closed!? NOOOO!!! Where else can you possibly buy your overpriced food. Going East leads to the Sidney Smith Entrance, and going South leads to the Guidance Office.",
+      "available_commands": {
+        "go east": 22,
+        "go south": 23
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 34,
+      "name": "Bahen 1F",
+      "brief_description": "You are on the first floor of the Bahen Center. Going up the stairs takes you to Bahen 2F and exiting takes you to Lower St. George Street. You see something shiny on the ground -- looks like a toonie?",
+      "long_description": "You are on the first floor of the Bahen Center. It's usually crowded at this time of the day, but today it's eerily quiet. Only a few students are studying at the table near the doors. You better not disturb them. One student is rushing down the corridor, wearing a heavy-looking backpack and carrying a textbook in their arms. The elevators aren't working so the stairs will have to suffice. Going up the stairs takes you to Bahen 2F, and exiting takes you to Lower St. George Street.",
+      "available_commands": {
+        "go up": 33,
+        "exit building": 4
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": ["toonie"]
+    },
+    {
+      "id": 33,
+      "name": "Bahen 2F",
+      "brief_description": "You are on the second floor of the Bahen Center. Going up the stairs takes you to Bahen 3F and going down takes you to Bahen 1F",
+      "long_description": "The second floor of Bahen is eerily quiet. Maybe there's just nothing going on. Well it looks like nothings going on so maybe you should just leave before something creepy happens. Going up takes you to Bahen 3F, and going down takes you to Bahen 1F.",
+      "available_commands": {
+        "go up": 32,
+        "go down": 34
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 32,
+      "name": "Bahen 3F",
+      "brief_description": "You are on the third floor of Bahen Center. There is a fan fiction club raving about the legendary purple volume of Boruto. Going up takes you to Bahen 4F and going down takes you to Bahen 2F.",
+      "long_description": "You walk into the third floor and are greeted by the UofT fan fiction club! They say that they are meeting today to discuss how to write fan fiction for Boruto, their favourite shoneun manga. They seem to be talking about this legendary volume of Boruto that has a purple background. You can go up to Bahen 4F or go down to Bahen 2F.",
+      "available_commands": {
+        "go up": 31,
+        "go down": 33
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 31,
+      "name": "Bahen 4F",
+      "brief_description": "You are on the fourth floor of Bahen Center. You can talk to Sadia to give her your project, or go down to Bahen 3F.",
+      "long_description": "You walk onto the fourth floor and dash to Sadia's office. You peek in the room and see her happily typing away on her computer. Wouldn't want to bother her without having a good reason, and would definitely not want to bother her without a plan. You can go talk to Sadia, or go down to Bahen 3F.",
+      "available_commands": {
+        "go down": 32,
+        "submit project to sadia": 100
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 42,
+      "name": "Myhal Auditorium",
+      "brief_description": "You are in the Myhal Auditorium. You see your pristine lucky mug. Going West takes you to Myhal Entrance.",
+      "long_description": "You walk into the Myhal Auditorium and see your lucky mug! Must have left it there during your last lecture, truly unlucky. Better hurry to get it, the next lecture is about to start soon. Going West will take you to Myhal Entrance.",
+      "available_commands": {
+        "go west": 41
+      },
+      "interaction": "",
+      "interaction_commands": {},
+      "items": ["lucky mug"]
+    },
+    {
+      "id": 41,
+      "name": "Myhal Entrance",
+      "brief_description": "You are in the Myhal Entrance. You see your buddy. Going east takes you to Myhal Auditorium, and exiting will take you to Lower St. George Street.",
+      "long_description": "You walk into Myhal and see happy engineering students (happy as in they don't look sad, eng students are never happy). You bump into one of your friends, it seems like they want to have a quick and short chat with you. Going East will take you to Myhal Auditorium and exiting the building will take you to Lower St. George Street.",
+      "available_commands": {
+        "go east": 42,
+        "exit building": 4,
+        "talk with buddy": -5
+      },
+      "interaction": "Did you know Sadia like sour patch kids? She probably will give you bonus marks if you gave her sour patch kids as a present...",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 91,
+      "name": "Streets of Toronto",
+      "brief_description": "",
+      "long_description": "You chose to dropout of University. You stayed at your parents for a bit, but was eventually kicked out and told to go 'find yourself.' With no job experience, no money, and worst of all, no love life, you were left to your own vices in the streets.",
+      "available_commands": {},
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 92,
+      "name": "Anime Convention",
+      "brief_description": "",
+      "long_description": "You were adopted by the UofT fan fiction club and fell in love with Boruto, the best shoneun anime. As a result, you dropped CS and joined Book and Media studies, where you studied the impact of manga in society. You now live a happy life on campus, no longer in CS, but in something arguably more fun.",
+      "available_commands": {},
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 93,
+      "name": "Mathematics Department",
+      "brief_description": "",
+      "long_description": "You got so sleepy while looking for the things you needed to submit the project that you fell asleep while standing! You and your partner failed out of the CMP1 stream and are now Math Specialists. Woops.",
+      "available_commands": {},
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    },
+    {
+      "id": 100,
+      "name": "CSC209 Class",
+      "brief_description": "",
+      "long_description": "After submitting your project, you and your group member were able to score a 77% and pass CSC111. You are now in second year in CSC209, and once again, cramming all of your projects last minute.",
+      "available_commands": {},
+      "interaction": "",
+      "interaction_commands": {},
+      "items": []
+    }
+  ],
+  "items": [
+    {
+      "name": "hotdog",
+      "cost": 5,
+      "itemget_description": "Yummy! Don't forget to add toppings!",
+      "commands": {
+        "look": "It's the hotdog you bought from in front of Sidney Smith.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 2,
+      "target_points": 0
+    },
+    {
+      "name": "shirt",
+      "cost": 5,
+      "itemget_description": "Cute shirt! Hope you don't mind the rip at the back... Actually, it kinda looks more vintage with it!",
+      "commands": {
+        "look": "It's the (ripped) shirt you bought at the thrift market.",
+        "drop": ""
+      },
+      "start_position": 4,
+      "target_points": 0
+    },
+    {
+      "name": "bandana",
+      "cost": 5,
+      "itemget_description": "A bandana perfect to make any person dapper. Or actually scratch that, anything dapper.",
+      "commands": {
+        "look": "It's a bandana. Perfect to make something dapper.",
+        "drop": ""
+      },
+      "start_position": 4,
+      "target_points": 20
+    },
+    {
+      "name": "socks",
+      "cost": 5,
+      "itemget_description": "Socks are so cute! They are like gloves for your feet.",
+      "commands": {
+        "look": "It's a pair of socks. How dainty.",
+        "drop": ""
+      },
+      "start_position": 4,
+      "target_points": 0
+    },
+    {
+      "name": "vintage book",
+      "cost": 5,
+      "itemget_description": "Cool book! It's a manga with a cool purple background and some kid who you think looks like a ninja.",
+      "commands": {
+        "look": "A purple background manga volume. Looks cool.",
+        "show": "",
+        "drop": ""
+      },
+      "start_position": 4,
+      "target_points": 0
+    },
+    {
+      "name": "hat",
+      "cost": 5,
+      "itemget_description": "hat. it hat.",
+      "commands": {
+        "look": "hat keep warm head. hat so nice. hat.",
+        "drop": ""
+      },
+      "start_position": 4,
+      "target_points": 0
+    },
+    {
+      "name": "toonie",
+      "cost": 0,
+      "itemget_description": "Cute toonie! Wonder where you can use this, like does anything even take cash anymore?",
+      "commands": {
+        "look": "Toonie. It's a toonie. Use at vending machines to buy goodies.",
+        "drop": ""
+      },
+      "start_position": 34,
+      "target_points": 0
+    },
+    {
+      "name": "coffee",
+      "cost": 8,
+      "itemget_description": "Mmmmm. The smell of sweet yet so very bitter coffee. Makes you want to do work, maybe even study for your midterm.",
+      "commands": {
+        "look": "Starbucks coffee. Smells delish.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 11,
+      "target_points": 0
+    },
+    {
+      "name": "matcha",
+      "cost": 8,
+      "itemget_description": "Yum! The matcha is perfectly iced and has some oat milk on top.",
+      "commands": {
+        "look": "Starbucks matcha. How yummy.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 11,
+      "target_points": 20
+    },
+    {
+      "name": "egg sandwich",
+      "cost": 8,
+      "itemget_description": "The egg kind of blends in with all the ingredients. Smells perfectly overpriced.",
+      "commands": {
+        "look": "An egg sandwich ready to be eaten.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 11,
+      "target_points": -1000
+    },
+    {
+      "name": "caramel latte",
+      "cost": 8,
+      "itemget_description": "The cream swirl at the top really adds to the experience. So suave.",
+      "commands": {
+        "look": "Starbucks caramel latte. It looks so perfect.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 11,
+      "target_points": 0
+    },
+    {
+      "name": "pink drink",
+      "cost": 8,
+      "itemget_description": "The server hands you a perfectly pink drink. Perfectly pink!",
+      "commands": {
+        "look": "A perfectly pink drink!",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 11,
+      "target_points": 0
+    },
+    {
+      "name": "stuffie",
+      "cost": 0,
+      "itemget_description": "The student checks your answer on ChatGPT and it says you are right! They thank you a lot and give you this cute little stuffie as a gift. How adorable.",
+      "commands": {
+        "look": "A cute stuffie. Maybe it's your new good luck charm.",
+        "drop": ""
+      },
+      "start_position": 1,
+      "target_points": 5
+    },
+    {
+      "name": "sour patch kids",
+      "cost": "toonie",
+      "itemget_description": "Good choice! Perfect for sharing, or for hogging, depends on your mood.",
+      "commands": {
+        "look": "A pristine package of sour patch kids.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 22,
+      "target_points": 20
+    },
+    {
+      "name": "gatorade",
+      "cost": "toonie",
+      "itemget_description": "It falls out of the machine and stubs your toe. You swear. People laugh. It's ok.",
+      "commands": {
+        "look": "Ice blue gatorade, perfect to quench any thirst.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 22,
+      "target_points": 0
+    },
+    {
+      "name": "welches",
+      "cost": "toonie",
+      "itemget_description": "What are you, and old person? Just kidding, love welches.",
+      "commands": {
+        "look": "A pack of welches to snack on the go.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 22,
+      "target_points": 0
+    },
+    {
+      "name": "mars bar",
+      "cost": "toonie",
+      "itemget_description": "Good choice! I love shoving 100g of pure sugar down my throat!",
+      "commands": {
+        "look": "A gooey mars bar.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 22,
+      "target_points": 0
+    },
+    {
+      "name": "coffee crisp",
+      "cost": "toonie",
+      "itemget_description": "That's my personal favourite. I don't know about you, and I also don't really care :D",
+      "commands": {
+        "look": "A nice-smelling cofee crisp.",
+        "eat": "",
+        "drop": ""
+      },
+      "start_position": 22,
+      "target_points": 0
+    },
+    {
+      "name": "charger",
+      "cost": 0,
+      "itemget_description": "You got your charger. Now your computer can actually run the code!",
+      "commands": {
+        "look": "Your trusty charger. It's a bit beaten up but it will do.",
+        "drop": ""
+      },
+      "start_position": 24,
+      "target_points": 10
+    },
+    {
+      "name": "plan",
+      "cost": 0,
+      "itemget_description": "You pick up your plan, perfect for reviewing!",
+      "commands": {
+        "look": "Plan: get usb, charger, and lucky mug, then submit assignment at Sadia's room on Bahen 4F. And if you have time, maybe get some bribes.",
+        "drop": ""
+      },
+      "start_position": 3,
+      "target_points": 0
+    },
+    {
+      "name": "usb",
+      "cost": 0,
+      "itemget_description": "You find your usb lying next to someone's half eaten chinese food. Wonder if they stole it... actually no one would want your busted code anyways.",
+      "commands": {
+        "look": "The usb with you and your partner's project.",
+        "drop": ""
+      },
+      "start_position": 11,
+      "target_points": 10
+    },
+    {
+      "name": "lucky mug",
+      "cost": 0,
+      "itemget_description": "Your lucky mug. The essence of the seventeen espresso shots you drank out of it is radiating off of the mug.",
+      "commands": {
+        "look": "Your lucky mug. You need this to submit your project",
+        "drop": ""
+      },
+      "start_position": 11,
+      "target_points": 10
+    },
+    {
+      "name": "thumbs down",
+      "cost": 0,
+      "itemget_description": "The student checks your answer in DeepSeek and says you are completely wrong!! You should really just look it up for him.",
+      "commands": {},
+      "start_position": "",
+      "target_points": ""
+    },
+    {
+      "name": "life advice",
+      "cost": 0,
+      "itemget_description": "You ask for life advice, and they give you a look up and down and frown. Ouch.",
+      "commands": {},
+      "start_position": "",
+      "target_points": ""
+    },
+    {
+      "name": "sadia fact",
+      "cost": 0,
+      "itemget_description": "The counsellor leans in close and says, 'Sadia loves matcha. Especially the one from Starbucks in Robarts.' Maybe you should get her some!",
+      "commands": {},
+      "start_position": "",
+      "target_points": ""
+    }
+  ]
+}

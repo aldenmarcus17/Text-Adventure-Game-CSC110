@@ -1,0 +1,313 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.75in]{geometry}
+
+\title{CSC111 Winter 2025 Project 1}
+\author{Alden Marcus Olemos Arciaga}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section*{Running the game}
+We should be able to run your game by simply running \texttt{adventure.py}. If you have any other requirements (e.g., installing certain modules), describe them here. Otherwise, skip this section.
+
+\section*{Game Map}
+The map of my game has one main location and four sub-locations. In addition, the endings are also given locations, along with unique location ids.
+
+\vspace{\baselineskip}
+
+\begin{minipage}[t]{0.24\textwidth}
+    \textbf{Main Map}
+    \begin{verbatim}
+  (12)  1  -1  -1
+  (22)  2   3  -1
+  (34)  4  -1  (41)
+    \end{verbatim}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\textwidth}
+    \textbf{Robarts}
+    \begin{verbatim}
+  11
+  12
+    \end{verbatim}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\textwidth}
+    \textbf{Sidney Smith}
+    \begin{verbatim}
+  21  22
+  23  24
+    \end{verbatim}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.24\textwidth}
+    \textbf{Bahen}
+    \begin{verbatim}
+  31
+  32
+  33
+  34
+    \end{verbatim}
+\end{minipage}
+
+\noindent
+Starting location is: 3 ///// note: ending location ids are 91, 92, 93, and 100
+
+\section*{Game Solutions}
+There are three ways to get a "good" ending.
+
+\noindent
+\subsubsection*{Solution 1, Regular Shmegular Computer Science Student:}
+["go west", "go west", "go south", "pick up charger", "go north", "exit building", "go north", "go west", "go up", "pick up usb", "go down", "exit building", "go south", "go south", "go east", "go east", "pick up lucky mug", "go west", "exit building", "go west", "go up", "go up", "go up", "submit project to sadia"]
+
+\subsubsection*{Solution 2, Sadia's Favourite Student:}
+["go west", "go south", "go west", "pick up toonie", "exit building", "talk to market vendor", "purchase bandana", "go east", "go east", "pick up lucky mug", "go west", "exit building", "go north", "go west", "buy from vending machine", "buy sour patch kids", "go south", "pick up charger", "go north", "exit building", "go north", "go west", "go up", "pick up usb", "purchase food from starbucks", "buy matcha", "go down", "exit building", "go south", "go south", "go west", "go up", go up", "go up", "submit project to sadia"]
+
+\subsubsection*{Solution 3, Super Saiyann:}
+["go west", "go south", "talk to market vendor", "purchase vintage book", "go west", "go up", "go up", "inventory", "vintage book", "show"]
+
+\section*{Lose Conditions}
+\subsubsection*{Lose Condition 1: Math Major for Life}
+This lose condition requires the player to run out of energy/moves. The minimum amount of moves to reach this endings is 45, however if the player purchases a consumable item, this value can increase. Once energy reaches zero, the game automatically sets the current location id to 93, corresponding to the Math Major ending. \vspace{\baselineskip}
+
+\noindent
+List of commands: \newline
+["go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east",
+ "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east", "go west", "go east"] \vspace{\baselineskip}
+
+\noindent
+Which parts of your code are involved in this functionality: \newline
+In 'game\_entities.py': 'Player' class with instance attribute 'energy' \newline
+In 'adventure.py': 'AdventureGame' has an instance attribute of 'Player' \newline
+In 'adventure\_helper.py': 'inventory\_actions', 'menu\_function', 'non\_menu\_function', 'pickup\_event'
+
+\subsubsection*{Lose Condition 2: Stranded in Toronto}
+This lose condition requires the player to go to the guidance office in Sidney Smith and ask them to dropout of University. This will immediately end the game. Once the dropout action is done, the game immediately sets the location id to 91, the location corresponding to the Stranded in Toronto ending. \vspace{\baselineskip}
+
+\noindent
+List of commands: \newline
+["go west", "go west", "go west", "go south", "ask to dropout"] \vspace{\baselineskip}
+
+\noindent
+Which parts of your code are involved in this functionality: \newline
+In 'adventure.py': 'AdventureGame' has integer constant 'DROPOUT\_NUMBER' \newline
+In 'adventure\_helper.py': 'non\_menu\_function'
+
+\subsubsection*{Lose Condition 3: You (Almost) Killed Your Prof}
+This lose condition requires the player to retrieve all mandatory items to submit the project and an egg sandwich from Starbucks. If all of these items are on the player when the project is submitted, this ending will take place and the location id will immediately be set to 100, the general location for any 'Sadia ending'. \vspace{\baselineskip}
+
+\noindent
+List of commands: \newline
+["go west", "go north", "go west", "go up", "pick up usb", "purchase food from
+ starbucks", "buy egg sandwich", "go down", "exit building", "go south", "go west", "go south", "pick up charger", "go north", "exit building", "go south", "go east", "go east", "pick up lucky mug", "go west", "exit building", "go west", "go up", "go up", "go up", "submit project to sadia"]\vspace{\baselineskip}
+
+\noindent
+Which parts of your code are involved in this functionality: \newline
+In 'game\_entities.py': 'Player' and 'Item' class \newline
+In 'adventure.py': 'AdventureGame' has 'Player' attribute, and 'get\_item' function \newline
+In 'adventure\_helper.py': 'interaction\_manager' called by 'non\_menu\_function' deals with buying item
+% Copy-paste the above if you have multiple lose conditions and describe each possible way to lose the game
+
+\section*{Inventory}
+
+\begin{enumerate}
+\item All location IDs that involve items in the game: [1, 2, 3, 4, 11, 22, 24, 32, 34, 42] \newline
+Most objects in my game do not have a target location, but rather when they are brought to Sadia at the end of the game each item gives differing amounts of points.
+
+\item Item data:
+\begin{enumerate}
+    \item For Item 1:
+    \begin{itemize}
+    \item Item name: usb
+    \item Item start location ID: 11
+    \item Item target location ID: 31
+    \end{itemize}
+        \item For Item 2:
+    \begin{itemize}
+    \item Item name: charger
+    \item Item start location ID: 24
+    \item Item target location ID: 31
+    \end{itemize}
+        \item For Item 3:
+    \begin{itemize}
+    \item Item name: lucky mug
+    \item Item start location ID: 42
+    \item Item target location ID: 31
+    \end{itemize}
+    \item For Item 4:
+    \begin{itemize}
+    \item Item name: vintage book
+    \item Item start location ID: 4
+    \item Item target location ID: 32
+    \end{itemize}
+        \item For Item 5:
+    \begin{itemize}
+    \item Item name: toonie
+    \item Item start location ID: 34
+    \item Item target location ID: 22
+    \end{itemize}
+    \item For Item 6:
+    \begin{itemize}
+    \item Item name: egg sandwich
+    \item Item start location ID: 11
+    \item Item target location ID: 31
+    \end{itemize}
+    \item For Item 7:
+    \begin{itemize}
+    \item Item name: shirt
+    \item Item start location ID: 4
+    \end{itemize}
+        \item For Item 8:
+    \begin{itemize}
+    \item Item name: bandana
+    \item Item start location ID: 4
+    \end{itemize}
+        \item For Item 9:
+    \begin{itemize}
+    \item Item name: socks
+    \item Item start location ID: 4
+    \end{itemize}
+        \item For Item 10:
+    \begin{itemize}
+    \item Item name: hat
+    \item Item start location ID: 4
+    \end{itemize}
+        \item For Item 11:
+    \begin{itemize}
+    \item Item name: hotdog
+    \item Item start location ID: 2
+    \end{itemize}
+        \item For Item 12:
+    \begin{itemize}
+    \item Item name: stuffie
+    \item Item start location ID: 1
+    \end{itemize}
+        \item For Item 13:
+    \begin{itemize}
+    \item Item name: coffee
+    \item Item start location ID: 11
+    \end{itemize}
+        \item For Item 14:
+    \begin{itemize}
+    \item Item name: matcha
+    \item Item start location ID: 11
+    \end{itemize}
+        \item For Item 15:
+    \begin{itemize}
+    \item Item name: caramel latte
+    \item Item start location ID: 11
+    \end{itemize}
+        \item For Item 16:
+    \begin{itemize}
+    \item Item name: pink drink
+    \item Item start location ID: 11
+    \end{itemize}
+        \item For Item 17:
+    \begin{itemize}
+    \item Item name: sour patch kids
+    \item Item start location ID: 22
+    \end{itemize}
+        \item For Item 18:
+    \begin{itemize}
+    \item Item name: gatorade
+    \item Item start location ID: 22
+    \end{itemize}
+        \item For Item 19:
+    \begin{itemize}
+    \item Item name: welches
+    \item Item start location ID: 22
+    \end{itemize}
+        \item For Item 20:
+    \begin{itemize}
+    \item Item name: mars bar
+    \item Item start location ID: 22
+    \end{itemize}
+        \item For Item 21:
+    \begin{itemize}
+    \item Item name: coffee crisp
+    \item Item start location ID: 22
+    \end{itemize}
+    % Copy-paste the above if you have more items, to list ALL items
+\end{enumerate}
+
+    \item Commands that should be used to pick up an item, and the commands)used to use/drop the item: \newline
+    ["go west", "go south", "go west", "pick up toonie", "exit building", "go north", "go west", "buy from vending machine", "buy sour patch kids", "quit"]
+    \item Which parts of your code  are involved in handling the \texttt{inventory} command: \newline
+    In 'game\_entities.py': 'Player' and 'Item' class \newline
+    In 'adventure.py': 'AdventureGame' class and the main method
+    In 'adventure\_helper.py': 'menu\_function' and 'inventory\_actions'
+\end{enumerate}
+
+\section*{Score}
+\begin{enumerate}
+
+    \item Briefly describe the way players can earn scores in your game. Include the first location in which they can increase their score, and the exact list of commands leading up to the score increase: \newline
+    Players can increase their score by obtaining items. Each item obtained is five points. In addition, at the end of the game, depending on the items in the players inventory, players will recieve or be deducted points. Any item Sadia likes (which can be found by talking to npcs) will award 20 points, any mandatory object (ie. usb) is awarded 10 points, and everything else is not given anything (except for the egg sandwich, which awards -1000 points). Additionally, the game will divide the player's remaining energy by five at the end of the game and that is also added to the players total score.
+
+    \item Copy the list you assigned to \texttt{scores\_demo} in the \texttt{project1\_simulation.py} file into this section of the report: \newline
+    ["pick up plan", "go west", "buy hotdog", "go south", "go west", "pick up toonie", "score", "quit"]
+
+
+    \item Which parts of your code (file, class, function/method) are involved in handling the \texttt{score} functionality:
+    In 'game\_entities.py': 'Player' and 'Item' class \newline
+    In 'adventure.py': 'AdventureGame' class and the main method
+    In 'adventure\_helper.py': 'pickup\_event' and 'ending'
+
+\end{enumerate}
+
+\section*{Enhancements}
+\begin{enumerate}
+    \item Interactions (Commands and Subcommands)
+    \begin{itemize}
+        \item Throughout my game, there are various actions that require the player to interact and make a second action (for example, buying something from the market at location 4, interacting with students, or talking to the guidance office at location 23). In total, there are seven locations with interactions, and each of these locations store new and unique subactions that the player can take. The multiple actions are then squished together to make one event.
+        \item Complexity level: High
+        \item Reasons you believe this is the complexity level: \newline
+        This required me to restructure the JSON file, adjust the Location class, build multiple new functions to read and run the interactions, and adjust the Event and EventList. The most difficult challenge was puting both actions and subactions into one event. In general, most events require one command to get there, however with the introduction of subactions, some events required two commands. Thus I struggled implementing which actions should count as events and be added to the event list, however I was able to write the code to make it generalisable, so that if I chose to add more interactions, subactions, or locations, I wouldn't have to adjust the current code.
+    \end{itemize}
+    \item Shops/Vendors and Wallet
+    \begin{itemize}
+        \item Three of the interactions in my game involves the user purchasing items from shops. This involves checking if the player has sufficient funds or the required item, then adding the item to their inventory, which is implemented through using interactions
+        \item Complexity level: Medium
+        \item Reasons you believe this is the complexity level: \newline
+        This required me to add a new instance attribute to the Player class and also to monitor special cases of interactions that involve vendors and shops. I also had to adjust the Location file, and the Item class themselves to include an attribute that relateas to their cost. The main challenge was how to implement this with the EventList.
+    \end{itemize}
+    \item Unique Interactions with Items
+    \begin{itemize}
+        \item Each item has their own commands attached to them: for example, you can 'look' at the plan you picked up, 'eat' the hotdog you bought, or 'show' the vintage book that you have. In addition, one of the endings depends on the user using a command on an item while in the inventory.
+        \item Complexity level: Medium
+        \item Reasons you believe this is the complexity level: \newline
+        Similar to interactions but on a smaller scale. I had to adjust the JSON file to include new attributes, including a dictionary with commands in it. I then had to make the inventory command be far more complex, as to navigate the inventory, the player has to select the item, then once the item is selected the game has to pull the available commands for each item.
+    \end{itemize}
+    \item Multiple Endings
+    \begin{itemize}
+        \item The game involves multiple endings that depends on the commands the player does, the items they pick up, and the interactions they choose to take. In total, there are three good endings and three bad endings.
+        \item Complexity level: Medium
+        \item Reasons you believe this is the complexity level: \newline
+        The endings heavily utilise the interactions system I made, thus it was fairly easy to implement this. I did have to create code that checks what location the Player is in and what Items they have, but this was already created due to the Shops/Vendors enhancement. The most difficult part was creating different ending locations in the JSON file and having the game correctly change the location corresponding to the player's achieved ending. I also created an 'ending' function in the helper file specifically for this.
+    \end{itemize}
+    \item Simple Quiz
+    \begin{itemize}
+        \item One of my interactions is a simple quiz that rewards the player a stuffie if they are correct. It is the interaction with the student at location 1.
+        \item Complexity level: Low
+        \item Reasons you believe this is the complexity level: \newline
+        I though I'd implement at least one actual quiz-style puzzle, which I did using the interaction framework I created. It was really easy because of it, and only required me to create a new interaction.
+    \end{itemize}
+
+
+
+    % Uncomment below section if you have more enhancements; copy-paste as needed
+    %\item Describe your enhancement here
+    %\begin{itemize}
+    %    \item Basic description of what the enhancement is:
+    %    \item Complexity level (low/medium/high):
+    %    \item Reasons you believe this is the complexity level (e.g., mention implementation details)
+    %\end{itemize}
+\end{enumerate}
+
+
+\end{document}
